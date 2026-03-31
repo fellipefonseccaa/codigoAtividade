@@ -1,0 +1,4 @@
+SELECT alunos.nome
+FROM alunos
+LEFT JOIN cursos ON alunos.curso_id = cursos.id
+WHERE cursos.id IS NULL;
