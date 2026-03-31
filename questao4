@@ -1,0 +1,5 @@
+SELECT cursos.nome, COUNT(alunos.id) AS total
+FROM cursos
+LEFT JOIN alunos ON alunos.curso_id = cursos.id
+GROUP BY cursos.nome
+HAVING COUNT(alunos.id) > 1;
